@@ -1,1 +1,37 @@
+Launch Metasploit by using msfconsole from the command line.
+
+-- Main Components of Metasploit --
+
+Auxiliary: Scanners, Crawlers, Fuzzers.
+
+Encoders: Encode the exploit and payload, goal is of not being detected by target system.
+
+Evasion: Similar to encoders where the goal is to avoid detection, but encoding is considered an indirect attempt
+to avoid detection, where evasion is a direct attempt at this.
+
+Exploits: Sorted by system, many of the names you would expect to see. Windows, Linux, Apple, Andriod, etc.
+
+NOPs: No Operations, used as buffers to get consistent payload sizes.
+
+Payloads:
+Adapter - wraps a single payload into a different format. Example given would be wrapping a payload into a powershell adapter.
+Singles - Self-containined payload, needs single action to be ran. Create user, launch an application, etc. No additional components needed.
+Stagers - Smaller data sent to set up connection and futher payload transfer from Metasploit to target system.
+Stages - Larger sized payloads. Will need to initially use a stager for a connection then transfer of these larger payloads.
+
+Post: Contains post-exploitation tools
+
+-- End Main Components of Metasploit --
+
+Metasploit supports commands similar to Linux, such as ls, ping, clear, history.
+
+Variables are cleared between uses of modules within Metasploit. Setting IP variables would need to be redone, for example when switching modules.
+
+Typing use + module will change the prompt and begin allowing options for the selected module
+Example: use exploit/windows/smb/ms17_010_eternalblue
+
+When prompt changes, you can still use normal commands, such as ls.
+
+Show options command can be used within a module to see it's specific options.
+
 
